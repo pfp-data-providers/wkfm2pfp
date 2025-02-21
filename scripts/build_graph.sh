@@ -2,7 +2,9 @@
 
 echo "##############"
 DATA_DIR=datasets
-RDF_FILE=${DATA_DIR}/wkfm.nt
+rm -rf ${DATA_DIR}
+mkdir ${DATA_DIR}
+RDF_FILE=${DATA_DIR}/wmp1.nt
 export NO_LIMIT=1
 start_time=$(date +%s)
 

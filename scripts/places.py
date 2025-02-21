@@ -58,6 +58,6 @@ for x in tqdm(items, total=len(items)):
     # coordinates
     g += coordinates_to_p168(subj, x)
 
-save_path = os.path.join(rdf_dir, f"wkfm_{entity_type}.nt")
+save_path = os.path.join(rdf_dir, f"wmp1_{entity_type}.nt")
 print(f"saving graph as {save_path}")
 g.serialize(save_path, format="nt", encoding="utf-8")

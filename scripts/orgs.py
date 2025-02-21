@@ -48,13 +48,13 @@ for x in tqdm(items, total=len(items)):
     g += make_e42_identifiers(
         subj,
         x,
-        type_domain="http://hansi/4/ever",
+        type_domain=TYPE_DOMAIN,
         default_lang="de",
     )
 
     # names
     g += make_appellations(
-        subj, x, type_domain="http://hansi/4/ever", default_lang="de"
+        subj, x, type_domain=TYPE_DOMAIN, default_lang="de"
     )
 
     # located
@@ -64,6 +64,6 @@ for x in tqdm(items, total=len(items)):
         g.add((subj, CIDOC["P74_has_current_or_former_residence"], URIRef(f"{PU}{y}")))
 
 
-save_path = os.path.join(rdf_dir, f"wkfm_{entity_type}.nt")
+save_path = os.path.join(rdf_dir, f"wmp1_{entity_type}.nt")
 print(f"saving graph as {save_path}")
 g.serialize(save_path, format="nt", encoding="utf-8")

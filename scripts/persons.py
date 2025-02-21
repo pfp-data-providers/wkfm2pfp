@@ -16,6 +16,7 @@ from acdh_cidoc_pyutils.namespaces import CIDOC
 from acdh_tei_pyutils.tei import TeiReader
 from acdh_tei_pyutils.utils import get_xmlid, check_for_hash
 
+TYPE_DOMAIN = "https://pfp-custom-types"
 g = Graph()
 domain = "https://wmp1.acdh.oeaw.ac.at/"
 PU = Namespace(domain)
@@ -138,6 +139,6 @@ for x in doc.any_xpath(".//tei:relation"):
 g.parse("https://pfp-schema.acdh.oeaw.ac.at/types/person-person/person-person.ttl")
 
 
-save_path = os.path.join(rdf_dir, f"wkfm_{entity_type}.nt")
+save_path = os.path.join(rdf_dir, f"wmp1_{entity_type}.nt")
 print(f"saving graph as {save_path}")
 g.serialize(save_path, format="nt", encoding="utf-8")

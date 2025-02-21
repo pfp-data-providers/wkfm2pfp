@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATA_DIR=datasets
-RDF_FILE=wkfm.nt
+RDF_FILE=wmp1.nt
 REPORT=${DATA_DIR}/validation_report.txt
 
 SHACL=${DATA_DIR}/myshapes.ttl
